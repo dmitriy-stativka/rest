@@ -1,0 +1,213 @@
+.footer{
+    background: $purple;
+    padding: 50px 0 0 0;
+    position: relative;
+
+    &-social{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+        right: 25px;
+
+        @media(max-width: $maxTablet) {
+            position: static;
+            justify-content: center;
+        }
+
+        li{
+            margin: 0 10px;
+
+            a{
+                path{
+                    fill: $white;
+                    transition: fill .3s ease-in-out;
+                }
+                &:hover{
+                    path{
+                        fill: $orange;
+                        transition: fill .3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+
+    &_copyright{
+        background: $green;
+        padding: 15px 0;
+        margin-top: 50px;
+
+        @media(max-width: $maxTablet) {
+            margin-top: 10px;
+        }
+
+        p{
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            color: $white;
+
+            @media(max-width: $maxTablet) {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    &_btn{
+        background: $red;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        color: $white;
+        margin: 50px 0 25px 0;
+        padding: 7px 25px;
+        display: inline-block;
+
+        @media(max-width: $maxTablet) {   
+            margin: 25px auto;
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+            order: 3;
+        }
+
+        &:hover{
+            background: $redHover;
+        }
+    }
+
+    #menu-footer-menu{
+        display: flex;
+        color: $white;
+    }
+
+    &_info{
+        display: flex;
+
+        @media(max-width: $maxTablet) {
+            flex-direction: column;
+        }
+    }
+
+    &_logo{
+        
+        margin-right: 12px;
+
+        @media(min-width: $maxTablet) {
+            flex-basis: 15%;
+        }
+
+        @media(max-width: $maxTablet) {   
+            margin: 0 0 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &_list{
+        flex-basis: 90%;
+        display: flex;
+        margin: 0 -10px;
+        padding-bottom: 40px;
+
+        @media(max-width: $maxTablet) {
+            display: none;
+        }
+
+        a{
+            color: $white;
+            text-decoration: none;
+            position: relative;
+
+            &:after{
+                content: '';
+                height: 4px;
+                background: $white;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                right: 0;
+                width: 0;
+                transition: width .3s ease-in-out;
+            }
+
+            &:hover{
+                &:after{
+                    width: 100%;
+                    transition: width .3s ease-in-out;
+                }
+            }
+        }
+
+        ul{
+            margin: 0 -10px;
+        }
+
+        li{
+            padding: 2px 10px;
+
+            ul.sub-menu{
+                li{
+                    a{
+                        font-weight: 500;
+                        font-size: 13px;
+                        line-height: 14px;
+                        color: $grey;
+                        display: inline-block;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                        
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_accredited{
+        @media(max-width: $maxTablet) {
+            margin-top: 60px;
+        }
+    }
+}
+
+
+.menu-footer-menu-1-container{
+    flex-basis: 100%;
+}
+
+#menu-footer-menu-1{
+    display: flex;
+}
+
+.footer_list--columns{
+    columns: 2;
+}
+
+#menu-footer-menu-2{
+    display: flex;
+    flex-wrap: wrap;
+
+    li{
+        flex-basis: 50%;
+    }
+}
+
+.menu-footer-menu-1-container,
+.menu-footer-menu-2-container{
+    padding: 0 10px;
+}
+
+.footer_list--sub-title{
+    //margin-top: 25px;
+}

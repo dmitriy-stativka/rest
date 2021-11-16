@@ -1,0 +1,138 @@
+.section-accordion {
+  padding-bottom: 75px;
+  padding-top: 75px;
+
+  @media(max-width:$maxMobile) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .container {
+    max-width: 803px;
+  }
+
+  h2 {
+    color: #D06528;
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 30px;
+
+    @media(max-width:$maxMobile) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  .accordion-item {
+    margin-bottom: 20px;
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #3E316B;
+      transition: all 0.2s;
+      cursor: pointer;
+
+      &.opened {
+        background-color: #009F99;
+
+        .accordion-item__heading-toggle {
+          background-image: url('../images/minus.svg');
+        }
+      }
+
+      &-title {
+        color: #fff;
+        font-size: 32px;
+        line-height: 30px;
+        width: calc(100% - 36px);
+
+        @media(max-width:$maxMobile) {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      &-toggle {
+        width: 36px;
+        height: 36px;
+        background-image: url('../images/plus.svg');
+        background-size: cover;
+
+        @media(max-width:$maxMobile) {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+
+    &__body {
+      margin-top: 30px;
+      display: none;
+      color: $darkGrey;
+
+      @media(max-width:$maxMobile) {
+        padding: 0 20px;
+      }
+      a {
+        font-weight: bold;
+        color: $blue!important;
+        &:hover {
+          color: $blueHover;
+        }
+      }
+
+
+      p {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 25px;
+
+        @media(max-width:$maxMobile) {
+          font-size: 16px;
+        }
+      }
+
+      a{
+        text-decoration: underline;
+        color: $green;
+        transition: color .3s ease;
+
+        &:hover{
+          color: $greenHover;
+          transition: color .3s ease;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      ul{
+        list-style: inside;
+        padding-left: 15px;
+
+        li{
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+      }
+
+      ol{
+        list-style: decimal;
+        padding-left: 25px;
+
+        li{
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+}

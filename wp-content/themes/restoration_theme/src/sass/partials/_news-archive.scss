@@ -1,0 +1,394 @@
+.news-archive {
+  margin-top: 190px;
+
+  @media screen and (max-width: $maxMobile) {
+    margin-top: 105px;
+  }
+
+  .top-archive {
+    text-align: center;
+
+    h1 {
+      color: #4DB1E0;
+      font-size: 60px;
+      line-height: 64px;
+      margin-bottom: 12px;
+
+      @media screen and (max-width: $maxMobile) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    p {
+      font-family: 'Open Sans';
+      font-size: 22px;
+      line-height: 30px;
+      color: #3F3E3E;
+
+      @media screen and (max-width: $maxMobile) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+    }
+
+    ul.breadcrumb {
+      margin-bottom: 0;
+    }
+  }
+
+  .categories-menu {
+    margin-top: 70px;
+    margin-bottom: 43px;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+
+
+    ul {
+      border-bottom: 3px solid #4DB1E0;
+
+      li {
+        display: inline-block;
+        position: relative;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 14px;
+        margin-right: 40px;
+        color: #3E316B;
+        padding: 5px 0;
+        cursor: pointer;
+
+        &:before {
+          content: attr(title);
+          display: block;
+          height: 0;
+          visibility: hidden;
+          overflow: hidden;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          pointer-events: none;
+          font-weight: 100;
+        }
+
+        &.active {
+          font-weight: inherit;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #4DB1E0;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+
+  .categories-menu-select {
+    margin-top: 70px;
+    margin-bottom: 43px;
+    display: none;
+    position: relative;
+
+
+    @media screen and (max-width: $maxMobile) {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      content: '';
+      width: 12px;
+      height: 7px;
+      background-size: cover;
+      background-image: url('../images/triangle.png');
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 53%;
+      transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
+
+    select {
+      padding: 12px 15px;
+      font-family: 'Open Sans';
+      font-size: 16px;
+      width: 100%;
+      border: 1px solid #3F3E3E;
+      outline: none;
+    }
+
+  }
+
+  .first-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+
+    @media screen and (max-width: 800px) {
+      padding-bottom: 25px;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: block;
+      padding-bottom: 5px;
+    }
+  }
+
+  .square-news {
+    position: relative;
+    display: block;
+    background-color: #e7e7e7;
+    width: calc(50% - 15.5px);
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .news-img {
+      width: 100%;
+      height: 100%;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 5e-05) 27.21%, rgba(0, 0, 0, 0.5) 75.15%);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .news-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 32px 30px 40px 40px;
+      color: #fff;
+
+      @media screen and (max-width: 860px) {
+        padding: 20px;
+      }
+
+      @media screen and (max-width: $maxMobile) {
+        padding: 15px 17px;
+      }
+
+      h4 {
+        color: #fff;
+        font-size: 30px;
+        line-height: 34px;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 860px) {
+          font-size: 24px;
+          line-height: 24px;
+        }
+
+        @media screen and (max-width: $maxMobile) {
+          font-size: 20px;
+          line-height: 22px;
+        }
+      }
+
+      &__meta {
+        font-size: 14px;
+        line-height: 22.9px;
+        font-weight: 500;
+
+        @media screen and (max-width: $maxMobile) {
+          font-size: 12px;
+          line-height: 15px;
+        }
+
+        .cat {
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+      }
+
+      .continue {
+        color: #4DB1E0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        text-decoration: underline;
+
+        &:hover {
+          color: #197099;
+        }
+
+        @media screen and (max-width: $maxMobile) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  .single-news {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+
+    @media screen and (max-width: 800px) {
+      display: block;
+      margin: 25px 0;
+    }
+
+    &__img {
+      width: calc(50% - 15.5px);
+      position: relative;
+
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
+
+      @media screen and (max-width: $maxMobile) {
+        margin-bottom: 20px;
+      }
+
+      a {
+        display: block;
+        position: relative;
+      }
+
+      img {
+        width: 100%;
+        height: 371px;
+        object-fit: cover;
+
+        @media screen and (max-width: $maxMobile) {
+          height: 233px;
+        }
+      }
+
+      .play-icon {
+        width: 52px;
+        height: 52px;
+        background-image: url('../images/play.svg');
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @media screen and (max-width: $maxMobile) {
+          height: 33px;
+          width: 33px;
+        }
+      }
+    }
+
+    &__content {
+      width: calc(50% - 15.5px);
+
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
+
+      &-meta {
+        color: #4DB1E0;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 500;
+
+        .cat {
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+
+        @media screen and (max-width: $maxMobile) {
+          font-size: 12px;
+          line-height: 15px;
+          margin-bottom: 5px;
+        }
+      }
+
+      h4 {
+        font-size: 24px;
+        line-height: 30px;
+        color: #3F3E3E;
+        margin-bottom: 15px;
+        font-weight: normal;
+
+        @media screen and (max-width: $maxMobile) {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        line-height: 26px;
+        color: #3F3E3E;
+        margin-bottom: 20px;
+      }
+
+      a.continue {
+        color: #4DB1E0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        position: relative;
+        text-decoration: underline;
+        top: -15px;
+
+        &:hover {
+          color: #197099;
+        }
+
+        @media screen and (max-width: $maxMobile) {
+          font-size: 15px;
+          line-height: 16px;
+        }
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,188 @@
+<?php
+
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page(array(
+        'page_title' => 'Events Cron',
+        'menu_title' => 'Events Cron',
+        'menu_slug' => 'events-cron',
+        'redirect' => false
+    ));
+
+    if (function_exists('acf_add_local_field_group')) {
+
+        acf_add_local_field_group(array(
+            'key' => 'group_61012256800e8',
+            'title' => 'Options',
+            'fields' => array(
+                array(
+                    'key' => 'field_610122636a79d',
+                    'label' => 'From Day',
+                    'name' => 'from_day',
+                    'type' => 'date_time_picker',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'display_format' => 'Y-m-d H:i:s',
+                    'return_format' => 'Y-m-d H:i:s',
+                    'first_day' => 1,
+                ),
+                array(
+                    'key' => 'field_610122636a79g',
+                    'label' => 'To Day',
+                    'name' => 'to_day',
+                    'type' => 'date_time_picker',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'display_format' => 'Y-m-d H:i:s',
+                    'return_format' => 'Y-m-d H:i:s',
+                    'first_day' => 1,
+                ),
+                array(
+                    'key' => 'field_610122636a79q',
+                    'label' => 'Regular Start Time',
+                    'name' => 'regular_start_time',
+                    'type' => 'time_picker',
+                    'required' => 1,
+                    'display_format' => 'H:i:s',
+                    'return_format' => 'H:i:s',
+                ),
+                array(
+                    'key' => 'field_610122636a79w',
+                    'label' => 'Regular End Time',
+                    'name' => 'regular_end_time',
+                    'type' => 'time_picker',
+                    'required' => 1,
+                    'display_format' => 'H:i:s',
+                    'return_format' => 'H:i:s',
+                ),
+
+                array(
+                    'key' => 'field_610122636a79i',
+                    'label' => 'Unusual Start Time',
+                    'name' => 'unusual_start_time',
+                    'type' => 'time_picker',
+                    'required' => 1,
+                    'display_format' => 'H:i:s',
+                    'return_format' => 'H:i:s',
+                ),
+                array(
+                    'key' => 'field_610122636a79r',
+                    'label' => 'Unusual End Time',
+                    'name' => 'unusual_end_time',
+                    'type' => 'time_picker',
+                    'required' => 1,
+                    'display_format' => 'H:i:s',
+                    'return_format' => 'H:i:s',
+                ),
+                array(
+                    'key' => 'field_610122826a79t',
+                    'label' => 'Interval (sec)',
+                    'name' => 'interval',
+                    'type' => 'number',
+                    'instructions' => 'Interval for check updates (cron will check for updates every N seconds)',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => 60,
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'min' => 10,
+                    'max' => '',
+                    'step' => 1,
+                ),
+                array(
+                    'key' => 'field_610122636a7zz',
+                    'label' => 'Unusual Days',
+                    'name' => 'unusual_days',
+                    'type' => 'select',
+                    'ui' => 1,
+                    'required' => 1,
+                    'choices' => array(
+                        'Sunday'	=> 'Sunday',
+                        'Monday' => 'Monday',
+                        'Tuesday' => 'Tuesday',
+                        'Wednesday ' => 'Wednesday',
+                        'Thursday ' => 'Thursday',
+                        'Friday  ' => 'Friday',
+                        'Saturday' => 'Saturday',
+                    ),
+                    'multiple' => 1,
+                    'allow_null' => 1,
+                ),
+                array(
+                    'key' => 'field_610122826a79l',
+                    'label' => 'Interval (Days)',
+                    'name' => 'interval_days',
+                    'type' => 'number',
+                    'instructions' => 'Interval between unusual days',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'default_value' => 14,
+                    'min' => 1,
+                    'max' => '',
+                    'step' => 1,
+                ),
+                array(
+                    'key' => 'field_610122a56a79f',
+                    'label' => 'Last Run',
+                    'name' => 'last_run',
+                    'type' => 'date_time_picker',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'display_format' => 'Y-m-d H:i:s',
+                    'return_format' => 'Y-m-d H:i:s',
+                    'first_day' => 1,
+                ),
+                array(
+                    'key' => 'field_610122a56a79j',
+                    'label' => 'Event',
+                    'name' => 'event',
+                    'type' => 'relationship',
+                    'instructions' => '',
+                    'filters' => array('search', 'taxonomy'),
+                    'post_type' => 'events',
+                    'required' => 0,
+                    'max' => 1,
+                    'return_format' => 'id',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'options_page',
+                        'operator' => '==',
+                        'value' => 'events-cron',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => true,
+            'description' => 'Do not change',
+        ));
+
+    }
+
+}

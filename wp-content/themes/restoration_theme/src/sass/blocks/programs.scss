@@ -1,0 +1,90 @@
+.programs{
+    padding: 140px 0;
+
+    @media(max-width: $maxTablet) {
+        padding: 50px 0;
+    }
+    
+    &_top-title{
+        font-weight: 100;
+        font-size: 48px;
+        line-height: 48px;
+        color: $darkGrey;
+        text-align: center;
+        display: block;
+
+        @media(max-width: $maxTablet) {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        margin: 0 -15px;
+    }
+
+    &-link{
+        margin-top: 100px;
+        padding: 0 15px;
+        flex-basis: 33.33%;
+        color: $darkGrey;
+        text-align: center;
+
+        img{
+            transform: scale(1);
+            transition: transform .3s ease;
+        }
+
+        @media(min-width: $maxDesc) {
+            &:hover{
+                img{
+                    transform: scale(1.05);
+                    transition: transform .3s ease;
+                }
+            }
+        }
+
+        @media(max-width: $maxTablet) {
+            margin-top: 40px;
+            flex-basis: 50%;
+        }
+
+        @media(max-width: $maxMobile) {
+            flex-basis: 100%;
+        }
+    }
+
+    &-image{
+        display: block;
+        margin: 0 auto;
+
+        @media(max-width: $maxTablet) {
+            max-width: 75px;
+        }
+    }
+
+    &-title{
+        font-weight: 100;
+        font-size: 30px;
+        line-height: 36px;
+        margin-top: 20px;
+
+        @media(max-width: $maxTablet) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+
+    &-desc{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        font-family:"Open Sans";
+        margin-top: 10px;
+        color: $darkGrey;
+    }
+}

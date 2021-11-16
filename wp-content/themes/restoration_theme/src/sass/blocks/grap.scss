@@ -1,0 +1,21 @@
+.grap{
+    margin: 50px 0;
+
+    &-list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .visualizer-front{
+            flex-basis: 33.33%;
+        }
+
+        @media(max-width: $maxDesc) {
+            flex-direction: column;
+
+            .visualizer-front{
+                flex-basis: 100%;
+            }
+        } 
+    }
+}

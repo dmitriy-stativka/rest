@@ -1,0 +1,273 @@
+.board{
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+
+    &--title{
+        font-weight: 100;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        color: $purple;
+        margin-bottom: 50px;
+
+        @media(max-width: $maxTablet) {
+            font-size: 30px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+    }
+    
+
+    &-list{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    &-item{
+        flex-basis: 25%;
+        padding: 0 10px;
+        margin-bottom: 50px;
+        cursor: pointer;
+
+        @media(max-width: $maxDesc) {
+            flex-basis: 50%;
+        }
+    }
+
+    &-img{
+        @media(min-width: $maxDesc) {
+            max-height: 290px;
+            max-width: 290px;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &-name{
+        display: block;
+        font-weight: 100;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: $purple;
+        margin-top: 5px;
+
+        @media(max-width: $maxTablet) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &-position{
+        font-weight: 100;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: $green;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: block;
+        margin: 10px 0;
+    }
+
+    &-minidesc{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: $darkGrey;
+        display: block;
+
+        @media(max-width: $maxTablet) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &-popup{
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        visibility: hidden;
+        z-index: 9999;
+        transform: scale(1.2);
+        transition: opacity .3s ease, transform .3s ease;
+
+
+        &-swiper{
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .swiper-slide{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &.show{
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity .3s ease, transform .3s ease;
+            visibility: visible;
+            pointer-events: all;
+            z-index: 999999;
+        }
+
+        &-item{
+            max-width: 1220px;
+            background: $purple;
+            overflow: hidden;
+            position: relative;
+
+            padding: 80px;
+            display: flex;
+
+            @media (max-width: $maxDesc) {
+                padding: 40px;
+            }
+
+            @media (max-width: $maxTablet) {
+                flex-direction: column;
+                padding: 25px;
+
+                img{
+                    max-width: 450px;
+                    width: 100%;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+
+            &-close{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                cursor: pointer;
+            
+                width: 40px;
+                height: 40px;
+            
+                &:after,
+                &:before{
+                    content: '';
+                    width: 80%;
+                    height: 3px;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    background: #fff;
+                    transform: rotate(45deg);
+                    transition: background .3s ease-in-out;
+                }
+                &:before{
+                    transform: rotate(-45deg);
+                }
+
+                &:hover{
+                    &:after,
+                    &:before{
+                        background: $orange;
+                        transition: background .3s ease-in-out;
+                    }
+                }
+            }
+
+        }
+
+        &-img{
+            padding-right: 35px;
+            min-width: 250px;
+            display: block;
+
+            img{
+                width: 100%;
+
+                @media (max-width: $maxMobile) {
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            @media (max-width: $maxTablet) {
+                margin-bottom: 25px;
+                padding-right: 0;
+                padding-top: 40px;
+            }
+
+            @media (max-width: $maxMobile) {
+                height: 180px;
+            }
+
+        }
+
+        &-name{
+            font-weight: 100;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 48px;
+            color: $white;
+
+            @media (max-width: $maxTablet) {
+                font-size: 22px;
+                line-height: 36px;
+            }
+
+        }
+
+        &-description{
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 26px;
+            color: $white;
+
+            max-height: 350px;
+            overflow: auto;
+
+            @media (max-width: $maxTablet) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+
+            @media (max-width: $maxMobile) {
+                max-height: 150px;
+            }
+
+            p{
+                margin-bottom: 25px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }    
+}
+
+.nf-error.field-wrap .nf-field-element:after{
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}

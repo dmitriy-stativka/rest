@@ -1,0 +1,44 @@
+.lego-banner {
+  color: #fff;
+  padding: 160px 0;
+  text-align: center;
+  background-size: cover;
+  margin-top: 77px;
+  margin-bottom: 75px;
+
+
+  @media(max-width:$maxMobile) {
+    margin-bottom: 25px;
+    margin-top: 24px;
+    padding: 286px 0;
+    background-position: top;
+  }
+
+  .container {
+    max-width: 800px;
+  }
+
+  h2 {
+    color: #fff;
+    line-height: 48px;
+    font-size: 48px;
+    margin-bottom: 18px;
+
+    @media(max-width:$maxMobile) {
+      line-height: 36px;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+  }
+
+  p {
+    font-family: $text-font-sfns;
+    font-size: 22px;
+    line-height: 30px;
+
+    @media(max-width:$maxMobile) {
+      line-height: 26px;
+      font-size: 18px;
+    }
+  }
+}

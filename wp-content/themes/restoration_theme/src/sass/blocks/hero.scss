@@ -1,0 +1,177 @@
+.hero-section{
+    background-color: #3E316B;
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    transition: background-size 2s ease;
+    position: relative;
+    overflow: hidden;
+
+    &_image{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.2);
+        transition: transform 2s ease;
+
+        &-animate{
+            transform: scale(1);
+            transition: transform 2s ease;
+        }
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 55%;
+        max-width: 595px;
+        min-width: 400px;
+        padding: 20px 0;
+        margin-left: 10%;
+        height: 100vh;
+        transform: translateX(-500%);
+        transition: transform 1.5s ease;
+
+        @media(min-width:$maxDesc) {
+            min-height: 700px;
+        }
+
+        &-animate{
+            transform: translateX(0);
+            transition: transform 1.5s ease;
+        }
+
+        @media(max-width: $maxDesc){            
+            width: 80%;
+        }
+
+        @media(max-width: $maxTablet){     
+            width: 100%;       
+            margin-left: 0;
+            min-width: 0;
+        }
+        
+        @media(max-width: $maxMobile){            
+            width: 95%;
+            min-width: auto;
+            margin: 0 auto;
+        }
+
+        &__pretitle {
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 20px;
+            color: $white;
+            padding-bottom: 10px;
+
+            @media(max-width: $maxMobile){            
+                font-size: 18px;
+            }
+        }
+
+        &__title{
+            font-size: 48px;
+            line-height: 1;
+            font-weight: bold;
+            color: $white;
+            --hero-title-mobile: 45px;
+
+            @media(max-width: $maxMobile){            
+                font-size: var(--hero-title-mobile) !important;
+                line-height: 1.1;
+            }
+    
+        }
+
+        &__description{
+            font-family: $openSanc-font;
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 400;
+            color: $white;
+            margin: 13px 0 20px 0;
+
+            @media(max-width: $maxMobile){            
+                font-size: 18px;
+                line-height: 26px;
+                margin: 19px 0 30px 0;
+            }
+        }
+
+        &__more-btn {
+            align-self: flex-start;
+            color: $white;
+            line-height: 19px;
+            background-color: $orange;
+
+            &#green {
+                &:hover{
+                    background-color: $greenHover!important;
+                }
+            }
+
+            &#orange {
+                &:hover{
+                    background-color: $orangeHover!important;
+                }
+            }
+
+            &#purple {
+                &:hover{
+                    background-color: $purpleHover!important;
+                }
+            }
+
+            &#blue {
+                &:hover{
+                    background-color: $blueHover!important;
+                }
+            }
+
+            &#red {
+                &:hover{
+                    background-color: $redHover!important;
+                }
+            }
+
+            @media(max-width: $maxMobile){            
+                align-self: stretch;
+                text-align: center;
+            }
+
+            @media(max-width: 375px){            
+                font-size: 14px;
+                padding: 10px !important;
+            }
+        }
+    }
+
+    .hero__video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        iframe{
+            width: 100%;
+            height: 100%;
+        }            
+    }
+
+    #player{
+        height: 100vh;
+
+    }
+
+    .plyr--video{
+        height: 100vh;
+    }
+}

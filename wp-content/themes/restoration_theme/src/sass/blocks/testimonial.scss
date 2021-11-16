@@ -1,0 +1,130 @@
+.testimonial{
+    background: $whiteGrey;
+    padding-top: 150px;
+    margin-top: 50px;
+
+    @media(max-width: $maxDesc){
+        padding-top: 50px;
+    }
+
+    &_content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 -25px;
+
+        @media(max-width: $maxTablet){            
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &_img,
+    &_text{
+        width: 50%;
+        padding: 0 25px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    @media(max-width: $maxTablet){            
+        &_text{
+            order: 2;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        &_img{
+            order: 1;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &--title{
+        color: $blue;
+        font-weight: initial;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+
+    &--review{
+        font-size: 36px;
+        line-height: 40px;
+        color: $darkGrey;
+        font-style: italic;
+        margin-top: 10px;
+        display: block;
+
+        @media(max-width: $maxDesc){            
+            font-size: 24px;
+            line-height: 28px;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    &--name{
+        color: $darkGrey;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+        display: block;
+        margin-top: 10px;
+
+        @media(max-width: $maxTablet){               
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+
+    &--position{
+        color: $darkGrey;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: uppercase;
+
+        @media(max-width: $maxTablet){               
+            font-size: 14px;
+            line-height: 14px;
+        }
+    }
+
+    &--btn{
+        border: 2px solid $blue;
+        max-width: 294px;
+        width: 100%;
+        padding: 11px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 40px;
+        color: $blue;
+        display: block;
+        background: $white;
+        text-align: center;
+        transition: background .3s ease, color .3s ease, border-color .3s ease;
+        margin-bottom: 0;
+
+
+        @media(min-width: $maxDesc){               
+            &:hover{
+                background: $blueHover;
+                color: $white;
+                border-color: $blueHover;
+                transition: background .3s ease, color .3s ease, border-color .3s ease;
+            }
+        }
+
+        @media(max-width: $maxTablet){               
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+}

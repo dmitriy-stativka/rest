@@ -1,0 +1,54 @@
+.donors{
+    margin: 100px 0;
+
+    @media(max-width: $maxDesc) {
+        margin: 50px 0;
+    }
+
+    &--desc{
+        text-align: center;
+        color: $darkGrey;
+        font-size: 18px;
+        line-height: 26px;
+        font-family: 'Open Sans';
+    }
+
+    &--title{
+        font-weight: 100;
+        font-style: normal;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        display: block;
+        color: $orange;
+        margin-bottom: 30px;
+
+        @media(max-width: $maxTablet) {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+    &_list{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px -10px 0 -10px;
+
+        @media(max-width: $maxDesc) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &_item{
+        padding: 0 10px;
+
+        @media(max-width: $maxDesc) {
+
+            padding: 15px;
+
+            img{
+                max-height: 40px;
+            }
+        }
+    }
+}

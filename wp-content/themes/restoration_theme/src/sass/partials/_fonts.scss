@@ -1,0 +1,81 @@
+//@include font-face("OPTIwtcGoudy", "../../fonts/OPTIwtcGoudy/OPTIwtcGoudy-Regular", 400);
+
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700');
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+//@include font-face("IT CAvant Garde Std Bk", "../../fonts/ITCAvantGardeStdBk.otf");
+
+ 
+@font-face{
+   font-family:"IT CAvant Garde Std Bk";
+   src: url("../src/fonts/ITCAvantGardeStdBk.otf");
+   font-style: normal;
+   font-display:swap;
+}
+
+@font-face{
+  font-family:"IT CAvant Garde Std Bk";
+  src: url("../src/fonts/ITCAvantGardeStdMd.otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display:swap;
+} 
+
+@font-face{
+  font-family:"IT CAvant Garde Std Bk";
+  src: url("../src/fonts/ITCAvantGardeStdDemi.otf");
+  font-style: normal;
+  font-weight: 600;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"IT CAvant Garde Std Bk";
+  src: url("../src/fonts/ITCAvantGardeStdBold.otf");
+  font-style: 700;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"Open Sans";
+  src: url("../src/fonts/OpenSansRegular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"Open Sans";
+  src: url("../src/fonts/OpenSansBold.ttf");
+  font-style: normal;
+  font-weight: bold;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"Open Sans";
+  src: url("../src/fonts/OpenSansExtraBold.otf");
+  font-style: normal;
+  font-weight: 800;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"SFNS Display Regular";
+  src: url("../src/fonts/SFNS_Display_Regular/SFNS Display Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display:swap;
+}
+
+@font-face{
+  font-family:"SFNS Display Regular";
+  src: url("../src/fonts/SFNS_Display_Regular/SFNS Display Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display:swap;
+}

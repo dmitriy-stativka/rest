@@ -1,0 +1,192 @@
+.impact{
+    position: relative;
+    margin-top: 400px;
+
+    @media (max-width: $maxTablet) {
+        margin-top: 100px!important;
+    }
+
+    &-top-title{
+        color: $purple;
+        font-weight: 100;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        display: block;
+        text-align: center;
+        margin-bottom: 70px;
+
+        @media (max-width: $maxTablet) {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+
+    &__content{
+        position: relative;
+        z-index: 5;
+        background: rgba(62, 49, 107, 0.95);
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    &--title{
+        font-size: 30px;
+        line-height: 36px;
+        color: $white;
+        font-weight: 100;
+
+        @media (max-width: $maxTablet) {
+            font-size: 26px!important;
+            font-weight: 600;
+            line-height: 30px;
+        }
+    }
+
+    &_list{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 50px -15px;
+
+        @media(max-width: $maxDesc){
+            flex-wrap: wrap;
+            margin: 25px -15px;
+        }
+        
+        @media(max-width: $maxMobile){            
+            align-items: center;
+            flex-direction: column;
+        }
+
+    }
+
+    &_item{
+        padding: 0 15px;
+        flex-basis: 25%;
+
+        @media(max-width: $maxDesc){
+            padding: 25px 15px;
+            flex-basis: 50%;
+        }
+
+        &--number{
+            color: $green;
+            font-size: 60px;
+            line-height: 72px;
+            letter-spacing: -1px;
+            font-weight: 100;
+
+            @media(max-width: $maxDesc){
+                font-size: 48px;
+                line-height: 58px;
+            }
+        }
+
+        &--desc{
+            color: $white;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 26px;
+            max-width: 300px;
+            margin: 10px auto 0 auto;
+            //text-transform: uppercase;
+
+            @media(max-width: $maxMobile){            
+                font-size: 18px!important;
+                line-height: 24px;
+                max-width: 240px;
+            }
+        }
+
+        &--under_text{
+            font-weight: 100;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 26px;
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+    }
+
+    &--text{
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        max-width: 480px;
+        font-family:"Open Sans";
+        margin: 0 auto;
+    }
+
+    &--buttons{
+        display: flex;
+        align-items: center;
+        max-width: 500px;
+        margin: 30px auto 0 auto;
+
+        @media(max-width: $maxMobile){            
+            flex-direction: column;
+        }
+    }
+
+    &-btn{
+        width: 100%;
+        margin: 0 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px;
+        color: $white;
+        background: $green;
+        transition: background .3s ease, color .3s ease;
+
+        @media(max-width: $maxMobile){            
+            margin: 5px 0;
+            flex-basis: 100%;
+        }
+
+        &-white{
+            color: $green;
+            background: $white;
+            transition: background .3s ease, color .3s ease;
+        }
+
+        @media(min-width: $maxDesc){            
+            &:hover{
+                background: $greenHover;
+                color: $white;
+                transition: background .3s ease, color .3s ease;
+            }
+        }
+    }
+
+    &--img{
+        max-width: 250px;
+        max-height: 700px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 28%;
+        margin: auto;
+        z-index: 8;
+
+        @media(max-width: 1400px){            
+            max-height: 380px;
+            max-width: 60px;
+            bottom: 30px;
+        }
+    }
+}
+
+@media(max-width: $maxDesc){            
+    .hide_mob{
+        display: none;
+    }
+}

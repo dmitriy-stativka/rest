@@ -1,0 +1,245 @@
+.email_contact{
+    background: $blue;
+    padding: 25px 0;
+    overflow: hidden;
+
+    &-title{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 26px;
+        color: $white;
+    }
+
+    &-text{
+        @media(min-width: $maxTablet) {
+            min-width: 50%;
+        }
+    }
+
+    &-desc{ 
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 20px;
+        color: $white;
+        margin-top: 5px;
+        font-family:"Open Sans";
+    }
+
+    &-form{
+        position: relative;
+        @media(min-width: $maxTablet) {
+            margin-left: 25px;
+            min-width: 45%;
+        }
+
+        @media(max-width: $maxTablet) {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .wpcf7-form-control-wrap{
+            width: 100%;
+
+            @media(min-width: $maxTablet) {
+                flex-basis: 70%;
+            }
+        }
+
+        .wpcf7-form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            p{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media(max-width: $maxDesc) {
+                    flex-direction: column;
+                }
+            }
+            
+            &.failed,
+            &.invalid{
+                flex-wrap: wrap;
+            }
+
+            @media(max-width: $maxDesc) {
+                flex-direction: column;
+            }
+        }
+
+        .wpcf7 .ajax-loader{
+            position: absolute;
+            right: -40px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            @media(max-width: $maxTablet) {   
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+
+        input[type="email"]{
+            background: $white;
+            font-size: 18px;
+            line-height: 30px;
+            color: $black;
+            padding: 8px 10px;
+            width: 100%;
+            font-family: 'Open Sans';
+            height: 45px!important;
+            border: none!important;
+            
+            &:placeholder{
+                color: $grey;
+            }
+            
+            @media(min-width: $maxTablet) {
+                max-width: 450px;
+            }
+
+            @media(min-width: $maxTablet) and (max-width: $maxDesc) {
+                font-size: 14px;
+            }
+        }
+
+        .nf-after-field{
+            position: absolute;
+            bottom: 0;
+        }
+
+        .nf-error.field-wrap .nf-field-element:after{
+            display: none;
+        }
+
+        nf-field{
+            width: 100%;
+        }
+
+        input[type="button"]{
+            background: $purple!important;
+            color: $white!important;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 13.5px 10px;
+            cursor: pointer;
+            transition: background .3s ease!important;
+            max-width: 146px!important;
+            height: 45px!important;
+            border-radius: 0!important;
+            width: 100%!important;
+
+            @media(max-width: $maxTablet) {
+                width: 100%!important;
+                margin-top: 5px;
+                max-width: 100%!important;
+            }
+
+            &:hover{
+                background: $purpleHover!important;
+                transition: background .3s ease!important;
+            }
+        }
+    }
+
+
+    nf-fields-wrap{
+        display: flex;
+        align-items: end;
+
+        @media(max-width: $maxTablet) {
+            flex-direction: column;
+        }
+
+        @media(min-width: $maxTablet) {
+            nf-field{
+                &:last-child{
+                    max-width: 150px;
+                }
+            }
+        }
+    }
+
+    .nf-form-content{
+        padding: 0;
+    }
+
+    #ninja_forms_required_items, .nf-field-container{
+        margin-bottom: 0;
+    }
+
+    .nf-error .nf-error-msg{
+        position: absolute;
+        bottom: -45px;
+        min-width: 300px;
+    }
+
+    .nf-form-title,
+    .nf-before-form-content,
+    .nf-field-label{
+        display: none;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(max-width: $maxTablet) {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
+.nf-field {
+    .nf-field-label {
+        margin-bottom: 0!important;
+    }
+}
+
+//.nf-field-container {
+//    &.nf-field {
+//        &#nf-field-43-wrap {
+//            &.nf-field-element ul {
+//                li {
+//                    padding-bottom: 20px!important;
+//                }
+//            }
+//        }
+//    }
+//}
+
+
+
+
+
+
+.listradio-wrap .nf-field-element label:after {
+    width: 20px!important;
+    height: 20px!important;
+    background-color: white!important;
+    border-color: $purple!important;
+    top: -6px!important;
+}
+.listradio-wrap .nf-field-element label.nf-checked-label:before {
+    width: 12px!important;
+    height: 12px!important;
+    top: -2px!important;
+    background-color: $green!important;
+}
+.section-form form .field-wrap li{
+    padding-top: 5px!important;
+    &:first-child {
+        padding-top: 15px!important;
+    }
+}

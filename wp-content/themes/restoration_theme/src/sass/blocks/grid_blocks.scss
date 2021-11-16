@@ -1,0 +1,240 @@
+.grid-blocks {
+  h2 {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: inherit;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $maxMobile) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+      .grid-post {
+        width: 25%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 900px) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: $maxMobile) {
+          width: 100%;
+        }
+
+        &__img {
+          display: block;
+
+          img {
+            width: 100%;
+            height: 177px;
+            object-fit: cover;
+          }
+        }
+
+        &__content {
+          h4 {
+            font-size: 20px;
+            line-height: 24px;
+            color: #3E316B;
+            margin-bottom: 15px;
+
+            @media screen and (max-width: $maxMobile) {
+              font-size: 26px;
+              line-height: 32px;
+              margin-bottom: 5px;
+            }
+
+          }
+
+          p {
+            font-family: 'Open Sans';
+            font-size: 16px;
+            line-height: 26px;
+            color: $darkGrey;
+
+            a {
+              text-decoration: underline;
+
+              &.grid-post__more {
+                color: $orange;
+                white-space: nowrap;
+                font-weight: 600;
+                line-height: 18px;
+
+                &:hover{
+                  color: $orangeHover!important;
+                }
+
+                @media screen and (max-width: $maxMobile) {
+                  margin-top: 0 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+
+  &.grid-1{
+    .grid-post__content {
+      h4 {
+        margin-top: 25px;
+        margin-bottom: 22px;
+
+        @media screen and (max-width: $maxMobile) {
+          margin-top: 19px;
+          margin-bottom: 14px;
+        }
+
+      }
+    }
+  }
+
+  &.grid-4{
+    .grid-post__content {
+      h4 {
+        margin-top: 12px;
+        margin-bottom: 7px;
+      }
+      a.grid-post__more {
+        &:hover {
+          color: $greenHover!important;
+        }
+      }
+    }
+  }
+
+  &.grid-3 {
+    .grid-post {
+      width: calc(33.3%);
+
+      @media screen and (max-width: 900px) {
+        width: 50%;
+      }
+
+      @media screen and (max-width: $maxMobile) {
+        width: 100%;
+      }
+
+      &__img {
+        img {
+          height: 215px;
+        }
+      }
+
+      &__content {
+        h4 {
+          font-size: 26px;
+          line-height: 32px;
+          margin-top: 14px;
+          margin-bottom: 7px;
+
+          @media screen and (max-width: 900px) {
+            font-size: 26px;
+            line-height: 32px;
+            margin-top: 13px;
+            margin-bottom: 5px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 26px;
+        }
+        a.grid-post__more {
+          &:hover {
+            color: $greenHover!important;
+          }
+        }
+      }
+    }
+  }
+
+  &.grid-2 {
+    .grid-blocks__inner {
+      max-width: 1011px;
+      margin: 0 auto;
+    }
+
+    .grid-post {
+      width: calc(50%);
+
+      @media screen and (max-width: 900px) {
+        width: 50%;
+      }
+
+      @media screen and (max-width: $maxMobile) {
+        width: 100%;
+      }
+
+      &__img {
+
+        img {
+          height: 327px;
+
+          @media screen and (max-width: 900px) {
+            height: 215px;
+          }
+        }
+      }
+
+      &__content {
+        h4 {
+          font-size: 30px;
+          line-height: 36px;
+          margin-top: 25px;
+          margin-bottom: 22px;
+
+          @media screen and (max-width: 900px) {
+            font-size: 26px;
+            line-height: 32px;
+            margin-top: 19px;
+            margin-bottom: 14px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+
+          @media screen and (max-width: 900px) {
+            font-size: 16px;
+          }
+        }
+        a.grid-post__more {
+          &:hover {
+            color: $orangeHover!important;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(610px,1fr));
+  grid-auto-rows: 810px;
+  grid-gap: 10px;
+}
